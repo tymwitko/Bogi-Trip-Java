@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnPreview"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onPrevClick"
+        android:text="Prev"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/btnRandom"
+        app:layout_constraintEnd_toStartOf="@+id/btnRoute" />
+
+    <Button
+        android:id="@+id/btnRoute"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onRouteClick"
+        android:text="@string/route"
+        android:textSize="13sp"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/btnNavi"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnRandom"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="onRandClick"
+        android:text="@string/rand"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNavi"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editMaxNumber" />
+
+    <Button
+        android:id="@+id/btnNavi"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Navi"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="413dp"
+        android:layout_height="746dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        mapbox:mapbox_cameraTargetLat="52.2298"
+        mapbox:mapbox_cameraTargetLng="21.0118"
+        mapbox:mapbox_cameraZoom="12">
+        <!--        mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10">-->
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <EditText
+        android:id="@+id/editMinNumber"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/min_range"
+        android:inputType="numberDecimal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editMaxNumber"
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/max_range"
+        android:inputType="numberDecimal"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editMinNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

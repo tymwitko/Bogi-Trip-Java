@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Bogi Trip</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="minimum_radius">Minimum Radius</string>
+    <string name="maximum_radius">Maximum Radius</string>
+    <string name="access_token">pk.eyJ1IjoidHltd2l0a28iLCJhIjoiY2tya21rYzNmMGRvbzJwbDd0MmloaTV2YiJ9.oUK-zAfaab_Sxd-c6lZDzg</string>
+    <string name="randomize">Randomize</string>
+    <string name="preview">Preview</string>
+    <string name="min_range">Min range (km)</string>
+    <string name="debug">Debug idzie tu</string>
+    <string name="max_range">Max range (km)</string>
+    <string name="ok">OK</string>
+    <string name="error_missing_attributes">Error: Missing attributes! Check the radia and your location services!</string>
+    <string name="rand">RAND</string>
+    <string name="route">Route</string>
 </resources>
